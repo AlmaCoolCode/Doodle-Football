@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         float ySpeed = rigidbody.velocity.y;
-        if (Input.GetButton("Jump" + playerNumber&)
+        if (Input.GetButton("Jump" + playerNumber) && IsOnGround())
         {
             ySpeed = jumpspeed;
         }

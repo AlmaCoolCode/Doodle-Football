@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1906895816766973085}
   m_Layer: 0
   m_Name: Football
-  m_TagString: Untagged
+  m_TagString: Football
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

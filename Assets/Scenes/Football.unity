@@ -730,6 +730,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4669202476286458423, guid: 5e8f50746e642451195a457587219f27, type: 3}
+      propertyPath: ScoreText
+      value: 
+      objectReference: {fileID: 1747927905}
     - target: {fileID: 4753455928976091358, guid: 5e8f50746e642451195a457587219f27, type: 3}
       propertyPath: m_Name
       value: Goal2
@@ -2264,6 +2268,10 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 4669202476286458423, guid: 5e8f50746e642451195a457587219f27, type: 3}
+      propertyPath: ScoreText
+      value: 
+      objectReference: {fileID: 1384071293}
     - target: {fileID: 4753455928976091358, guid: 5e8f50746e642451195a457587219f27, type: 3}
       propertyPath: m_Name
       value: Goal1
