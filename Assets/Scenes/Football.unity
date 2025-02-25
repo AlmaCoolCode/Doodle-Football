@@ -319,6 +319,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1846266165}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!1 &132475999 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2935764260181736515, guid: 039aec9d7ccc69b498199ce04b849337, type: 3}
+  m_PrefabInstance: {fileID: 6944839572993306354}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &132476004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132475999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 085c45f32b10e9842a87b792f49cbab9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BallStart: {fileID: 1623464386}
 --- !u!1 &142908072
 GameObject:
   m_ObjectHideFlags: 0
@@ -453,6 +471,90 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 142908072}
   m_CullTransparentMesh: 0
+--- !u!1 &172914052
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 172914054}
+  - component: {fileID: 172914053}
+  m_Layer: 0
+  m_Name: GoalText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!212 &172914053
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172914052}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 54e6eb0a6d7db3c1c864a53417bcaf23, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 5.27, y: 5.13}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &172914054
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172914052}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 9, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 0.75}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &361750325
 GameObject:
   m_ObjectHideFlags: 0
@@ -734,6 +836,10 @@ PrefabInstance:
       propertyPath: ScoreText
       value: 
       objectReference: {fileID: 1747927905}
+    - target: {fileID: 4669202476286458423, guid: 5e8f50746e642451195a457587219f27, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1657933544}
     - target: {fileID: 4753455928976091358, guid: 5e8f50746e642451195a457587219f27, type: 3}
       propertyPath: m_Name
       value: Goal2
@@ -775,6 +881,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e8f50746e642451195a457587219f27, type: 3}
+--- !u!114 &853203906 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2591745609367876055, guid: f6b808b2e511c974e8741dc3ad91a87f, type: 3}
+  m_PrefabInstance: {fileID: 1652995093}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbbf4b6a8ab4a7846aa76f1e5cdd3870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &914086562
 GameObject:
   m_ObjectHideFlags: 0
@@ -948,6 +1065,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.56, y: 2.56}
   m_EdgeRadius: 0
+--- !u!114 &1192349403 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2591745609367876055, guid: f6b808b2e511c974e8741dc3ad91a87f, type: 3}
+  m_PrefabInstance: {fileID: 9004920453996739930}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbbf4b6a8ab4a7846aa76f1e5cdd3870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1258897281
 GameObject:
   m_ObjectHideFlags: 0
@@ -1258,6 +1386,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1384071291}
   m_CullTransparentMesh: 0
+--- !u!1 &1597654326
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1597654327}
+  m_Layer: 0
+  m_Name: PlayerStart2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1597654327
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1597654326}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1623464385
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1623464386}
+  m_Layer: 0
+  m_Name: BallStart
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1623464386
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1623464385}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1652995093
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1266,6 +1456,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2591745609367876055, guid: f6b808b2e511c974e8741dc3ad91a87f, type: 3}
+      propertyPath: playerStart
+      value: 
+      objectReference: {fileID: 1597654327}
     - target: {fileID: 2591745609367876055, guid: f6b808b2e511c974e8741dc3ad91a87f, type: 3}
       propertyPath: playerNumber
       value: 2
@@ -1323,6 +1517,54 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6b808b2e511c974e8741dc3ad91a87f, type: 3}
+--- !u!1 &1657933543
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1657933545}
+  - component: {fileID: 1657933544}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1657933544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1657933543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a0bae878c6851942a016b34202f7982, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  football: {fileID: 132476004}
+  player1: {fileID: 1192349403}
+  player2: {fileID: 853203906}
+  goalBanner: {fileID: 172914052}
+--- !u!4 &1657933545
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1657933543}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.0411048, y: 9.03, z: -0.09027535}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1683354012
 GameObject:
   m_ObjectHideFlags: 0
@@ -2256,6 +2498,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2034768183
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2034768184}
+  m_Layer: 0
+  m_Name: PlayerStart1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2034768184
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2034768183}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2095216465
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2272,6 +2545,10 @@ PrefabInstance:
       propertyPath: ScoreText
       value: 
       objectReference: {fileID: 1384071293}
+    - target: {fileID: 4669202476286458423, guid: 5e8f50746e642451195a457587219f27, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1657933544}
     - target: {fileID: 4753455928976091358, guid: 5e8f50746e642451195a457587219f27, type: 3}
       propertyPath: m_Name
       value: Goal1
@@ -2330,6 +2607,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5379452474638426151, guid: 039aec9d7ccc69b498199ce04b849337, type: 3}
+      propertyPath: BallStart
+      value: 
+      objectReference: {fileID: 1623464386}
     - target: {fileID: 2935764260181736515, guid: 039aec9d7ccc69b498199ce04b849337, type: 3}
       propertyPath: m_Name
       value: Football
@@ -2374,10 +2655,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -5379452474638426151, guid: 039aec9d7ccc69b498199ce04b849337, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2935764260181736515, guid: 039aec9d7ccc69b498199ce04b849337, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 132476004}
   m_SourcePrefab: {fileID: 100100000, guid: 039aec9d7ccc69b498199ce04b849337, type: 3}
 --- !u!1001 &9004920453996739930
 PrefabInstance:
@@ -2387,6 +2672,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2591745609367876055, guid: f6b808b2e511c974e8741dc3ad91a87f, type: 3}
+      propertyPath: playerStart
+      value: 
+      objectReference: {fileID: 2034768184}
     - target: {fileID: 4292472847937598405, guid: f6b808b2e511c974e8741dc3ad91a87f, type: 3}
       propertyPath: m_Name
       value: Player1
@@ -2448,3 +2737,8 @@ SceneRoots:
   - {fileID: 9004920453996739930}
   - {fileID: 1652995093}
   - {fileID: 6944839572993306354}
+  - {fileID: 1623464386}
+  - {fileID: 1657933545}
+  - {fileID: 2034768184}
+  - {fileID: 1597654327}
+  - {fileID: 172914054}

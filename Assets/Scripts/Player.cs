@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     [SerializeField] float movespeed = 10;
     [SerializeField] int playerNumber = 1;
     [SerializeField] Transform groundCheck;
+    [SerializeField] Transform playerStart;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,5 +31,12 @@ public class Player : MonoBehaviour
     {
         RaycastHit2D hit = Physics2D.Raycast(groundCheck.position, Vector2.down, 0.1f);
         return hit.collider != null;
+    }
+
+    public void Reset()
+    {
+        transform.position = playerStart.position;
+        rigidbody.velocity = Vector2.zero;
+        rigidbody.angularVelocity = 0;
     }
 }

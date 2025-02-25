@@ -5,7 +5,7 @@ using TMPro;
 
 public class Goal : MonoBehaviour
 {
-    [SerializeField] TMP_Text ScoreText; 
+    [SerializeField] TMP_Text ScoreText;
     int GoalScore = 0;
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -13,6 +13,7 @@ public class Goal : MonoBehaviour
         {
             GoalScore = GoalScore + 1;
             ScoreText.text = GoalScore.ToString();
+            GameManager.Instance.Reset();
         }
     }
 }
