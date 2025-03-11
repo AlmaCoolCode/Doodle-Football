@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2206726756492980415}
   - component: {fileID: 1021260899118957366}
   - component: {fileID: 1906895816766973085}
-  - component: {fileID: -5379452474638426151}
+  - component: {fileID: 3412487743195855424}
   m_Layer: 0
   m_Name: Football
   m_TagString: Football
@@ -149,7 +149,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-5379452474638426151
+--- !u!114 &3412487743195855424
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -158,6 +158,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2935764260181736515}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3885b1191dce82046bd0f4f87161f286, type: 3}
+  m_Script: {fileID: 11500000, guid: 1673d50c8f6a98645b547604496afedb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BallStart: {fileID: 0}

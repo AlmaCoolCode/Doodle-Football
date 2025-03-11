@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Football : MonoBehaviour
+public class Football2 : MonoBehaviour
 {
     [SerializeField] private Transform BallStart;
     private Rigidbody2D body;
@@ -15,7 +15,7 @@ public class Football : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     public void Reset()
