@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,8 +11,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Player player1;
     [SerializeField] private Player player2;
     [SerializeField] GameObject goalBanner;
+    [SerializeField] private Goal goal1;
+    [SerializeField] private Goal goal2;
     [SerializeField] int timer = 90;
     [SerializeField] TMP_Text Timer;
+    [SerializeField] AudioSource whistle;
     private int TimerStart;
     // Start is called before the first frame update
     void Start()
@@ -42,6 +46,7 @@ public class GameManager : MonoBehaviour
 
     public void Reset()
     {
+        whistle.Play();
         football.Reset();
         player1.Reset();
         player2.Reset();
@@ -72,6 +77,18 @@ public class GameManager : MonoBehaviour
 
     private void GameOver()
     {
+        if (goal1.GoalScore > goal2.GoalScore)
+        {
+            SceneManager.LoadScene("Red win");
+        }
+        else if (goal2.GoalScore > goal1.GoalScore)
+        {
+            SceneManager.LoadScene("Green win");
+        }
+        else
+        {
+            SceneManager.LoadScene("Draw");
+        }
         print("Game over");
     }
 

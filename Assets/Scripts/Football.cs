@@ -5,6 +5,7 @@ using UnityEngine;
 public class Football : MonoBehaviour
 {
     [SerializeField] private Transform BallStart;
+    [SerializeField] AudioSource kick;
     private Rigidbody2D body;
     // Start is called before the first frame update
     void Start()
@@ -23,5 +24,11 @@ public class Football : MonoBehaviour
         transform.position = BallStart.position;
         body.velocity = Vector2.zero;
         body.angularVelocity = 0;
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        print("kick");
+        kick.PlayOneShot(kick.clip);
     }
 }

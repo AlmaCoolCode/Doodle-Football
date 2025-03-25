@@ -6,7 +6,7 @@ using TMPro;
 public class Goal : MonoBehaviour
 {
     [SerializeField] TMP_Text ScoreText;
-    int GoalScore = 0;
+    public int GoalScore = 0;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Football")
