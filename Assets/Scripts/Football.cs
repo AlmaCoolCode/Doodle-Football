@@ -26,9 +26,9 @@ public class Football : MonoBehaviour
         body.angularVelocity = 0;
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        print("kick");
-        kick.PlayOneShot(kick.clip);
+        //kick.PlayOneShot(kick.clip);
+        kick.Play();
     }
 }
