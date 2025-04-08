@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-    [SerializeField] private Football football;
+    [SerializeField] public Football football;
     [SerializeField] private Player player1;
     [SerializeField] private Player player2;
     [SerializeField] GameObject goalBanner;

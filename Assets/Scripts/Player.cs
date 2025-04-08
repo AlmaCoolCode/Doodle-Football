@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -11,6 +12,7 @@ public class Player : MonoBehaviour
     [SerializeField] int playerNumber = 1;
     [SerializeField] Transform groundCheck;
     [SerializeField] Transform playerStart;
+    [SerializeField] public Transform enemyGoal;
     // Start is called before the first frame update
     void Start()
     {
