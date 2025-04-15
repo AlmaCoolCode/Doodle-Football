@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    [SerializeField] GameObject powerUpPrefab;
+    [SerializeField] GameObject[] powerUpPrefabs;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,8 +13,8 @@ public class Spawner : MonoBehaviour
 
     private void Spawn()
     {
-        GameObject powerUp = Instantiate(powerUpPrefab, transform);
-        powerUp.transform.position += new Vector3(Random.Range(-10, 10), Random.Range(-3, 3), 0);
+        GameObject powerUp = Instantiate(powerUpPrefabs[Random.Range(0, powerUpPrefabs.Length)], transform);
+        powerUp.transform.position += new Vector3(Random.Range(-6, 6), 0, 0);
     }
 
     // Update is called once per frame
