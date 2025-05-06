@@ -4,8 +4,9 @@ using UnityEngine;
 
 public enum PowerUpType
 {
-    Fire,
-    Ice
+    Fire = 0,
+    Ice = 1,
+    Grow = 2
 }
 
 public class PowerUp : MonoBehaviour
@@ -34,6 +35,9 @@ public class PowerUp : MonoBehaviour
                     break;
                 case PowerUpType.Ice:
                     player.enemy.Freeze();
+                    break;
+                case PowerUpType.Grow:
+                    player.Grow();
                     break;
                 default:
                     break;

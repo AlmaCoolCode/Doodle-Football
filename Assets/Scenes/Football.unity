@@ -1532,7 +1532,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96722e82d1675524c958907bfcf6df07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerUpPrefab: {fileID: 3026352492643813034, guid: f2c10e0b8a5afae4ba465c4a5747c1a2, type: 3}
+  powerUpPrefabs:
+  - {fileID: 3026352492643813034, guid: 9b8f616f38679bd478a4cbaf2aa69ada, type: 3}
+  - {fileID: 3026352492643813034, guid: f2c10e0b8a5afae4ba465c4a5747c1a2, type: 3}
 --- !u!4 &1442970492
 Transform:
   m_ObjectHideFlags: 0
@@ -1623,6 +1625,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2591745609367876055, guid: f6b808b2e511c974e8741dc3ad91a87f, type: 3}
+      propertyPath: enemy
+      value: 
+      objectReference: {fileID: 1192349403}
     - target: {fileID: 2591745609367876055, guid: f6b808b2e511c974e8741dc3ad91a87f, type: 3}
       propertyPath: enemyGoal
       value: 
@@ -2950,6 +2956,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2591745609367876055, guid: f6b808b2e511c974e8741dc3ad91a87f, type: 3}
+      propertyPath: enemy
+      value: 
+      objectReference: {fileID: 853203906}
     - target: {fileID: 2591745609367876055, guid: f6b808b2e511c974e8741dc3ad91a87f, type: 3}
       propertyPath: enemyGoal
       value: 
