@@ -166,6 +166,8 @@ MonoBehaviour:
   BallStart: {fileID: 0}
   kick: {fileID: 2038535862995091899}
   fire: {fileID: 5657687690041154912}
+  RoboSprite: {fileID: 21300000, guid: bf599f29c048d421f998983e734100ab, type: 3}
+  Renderer: {fileID: 2206726756492980415}
 --- !u!82 &2038535862995091899
 AudioSource:
   m_ObjectHideFlags: 0

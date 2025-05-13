@@ -6,7 +6,8 @@ public enum PowerUpType
 {
     Fire = 0,
     Ice = 1,
-    Grow = 2
+    Grow = 2,
+    Roboball = 3,
 }
 
 public class PowerUp : MonoBehaviour
@@ -38,6 +39,9 @@ public class PowerUp : MonoBehaviour
                     break;
                 case PowerUpType.Grow:
                     player.Grow();
+                    break;
+                case PowerUpType.Roboball:
+                    player.Roboball();
                     break;
                 default:
                     break;

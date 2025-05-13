@@ -1533,9 +1533,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerUpPrefabs:
-  - {fileID: 3026352492643813034, guid: 9b8f616f38679bd478a4cbaf2aa69ada, type: 3}
   - {fileID: 3026352492643813034, guid: f2c10e0b8a5afae4ba465c4a5747c1a2, type: 3}
+  - {fileID: 3026352492643813034, guid: 9b8f616f38679bd478a4cbaf2aa69ada, type: 3}
   - {fileID: 3026352492643813034, guid: 7f46c5d6b14a4ba45a76fae5b2dd923d, type: 3}
+  - {fileID: 3026352492643813034, guid: 1d814c902988d6146a327f7ebddbe175, type: 3}
 --- !u!4 &1442970492
 Transform:
   m_ObjectHideFlags: 0
