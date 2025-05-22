@@ -9,10 +9,11 @@ public class Player : MonoBehaviour
     [SerializeField] Rigidbody2D rigidbody;
     [SerializeField] float jumpspeed = 10;
     [SerializeField] float movespeed = 10;
-    [SerializeField] int playerNumber = 1;
+    [SerializeField] public int playerNumber = 1;
     [SerializeField] Transform groundCheck;
     [SerializeField] Transform playerStart;
     [SerializeField] public Transform enemyGoal;
+    [SerializeField] public Goal ownGoal;
     [SerializeField] public Player enemy;
     [SerializeField] GameObject iceCube;
     private bool isFrozen = false;
