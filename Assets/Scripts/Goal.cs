@@ -21,7 +21,7 @@ public class Goal : MonoBehaviour
 
     public void SmallGoals(int whichGoal)
     {
-        StartCoroutine(SmallGoals(3, whichGoal));
+        StartCoroutine(SmallGoals(5, whichGoal));
     }
 
     IEnumerator SmallGoals(float smallTime, int whichGoal)

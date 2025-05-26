@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] int timer = 90;
     [SerializeField] TMP_Text Timer;
     [SerializeField] AudioSource whistle;
+    [SerializeField] GameObject rot;
+    [SerializeField] GameObject ichSeheRot;
     private int TimerStart;
     // Start is called before the first frame update
     void Start()
@@ -60,6 +62,20 @@ public class GameManager : MonoBehaviour
         goalBanner.SetActive(false);
     }
 
+    public void IchSeheRot()
+    {
+        StartCoroutine(Rot());
+    }
+
+    private IEnumerator Rot()
+    {
+        rot.SetActive(true);
+        ichSeheRot.SetActive(true);
+        yield return new WaitForSeconds(5);
+        ichSeheRot.SetActive(false);
+        rot.SetActive(false);
+    }
+    
     private IEnumerator Countdown()
     {
         yield return new WaitForSeconds(1);

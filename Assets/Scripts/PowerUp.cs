@@ -8,7 +8,8 @@ public enum PowerUpType
     Ice = 1,
     Grow = 2,
     Roboball = 3,
-    SmallGoals = 4
+    SmallGoals = 4,
+    IchSeheRot = 5,
 }
 
 public class PowerUp : MonoBehaviour
@@ -46,6 +47,9 @@ public class PowerUp : MonoBehaviour
                     break;
                 case PowerUpType.SmallGoals:
                     player.ownGoal.SmallGoals(player.playerNumber);
+                    break;
+                case PowerUpType.IchSeheRot:
+                    GameManager.Instance.IchSeheRot();
                     break;
                 default:
                     break;
