@@ -632,6 +632,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &400831672 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 241457108488478212, guid: 039aec9d7ccc69b498199ce04b849337, type: 3}
+  m_PrefabInstance: {fileID: 6944839572993306354}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &406370014
 GameObject:
   m_ObjectHideFlags: 0
@@ -1617,7 +1622,7 @@ Transform:
   m_GameObject: {fileID: 1380784705}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -394.98648, y: -250.70174, z: 0}
+  m_LocalPosition: {x: -394.98648, y: -250.70174, z: 47.75}
   m_LocalScale: {x: 4.2497005, y: 4.2497005, z: 4.2497005}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2165,6 +2170,7 @@ MonoBehaviour:
   whistle: {fileID: 1657933546}
   rot: {fileID: 1608764828}
   ichSeheRot: {fileID: 1914429648}
+  ichSehe: {fileID: 400831672}
 --- !u!4 &1657933545
 Transform:
   m_ObjectHideFlags: 0

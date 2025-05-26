@@ -10,6 +10,7 @@ public enum PowerUpType
     Roboball = 3,
     SmallGoals = 4,
     IchSeheRot = 5,
+    
 }
 
 public class PowerUp : MonoBehaviour

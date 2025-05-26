@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
     [SerializeField] public Goal ownGoal;
     [SerializeField] public Player enemy;
     [SerializeField] GameObject iceCube;
-    [SerializeField] public int seitenWechsel = -1;
+    //[SerializeField] public int seitenWechsel = -1;
     private bool isFrozen = false;
     private bool hasRoboball = false;
     // Start is called before the first frame update
@@ -55,10 +55,10 @@ public class Player : MonoBehaviour
         rigidbody.angularVelocity = 0;
     }
 
-    public void SeitenWechsel()
-    {
+    //public void SeitenWechsel()
+    //{
 
-    }
+    //}
 
     public void Roboball()
     {

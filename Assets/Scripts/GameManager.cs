@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] AudioSource whistle;
     [SerializeField] GameObject rot;
     [SerializeField] GameObject ichSeheRot;
+    [SerializeField] GameObject ichSehe;
     private int TimerStart;
     // Start is called before the first frame update
     void Start()
@@ -71,9 +72,11 @@ public class GameManager : MonoBehaviour
     {
         rot.SetActive(true);
         ichSeheRot.SetActive(true);
+        ichSehe.SetActive(true);
         yield return new WaitForSeconds(5);
         ichSeheRot.SetActive(false);
         rot.SetActive(false);
+        ichSehe.SetActive(false);
     }
     
     private IEnumerator Countdown()
