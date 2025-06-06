@@ -10,7 +10,7 @@ public enum PowerUpType
     Roboball = 3,
     SmallGoals = 4,
     IchSeheRot = 5,
-    
+    IchBin1ProzentSchwarz = 6
 }
 
 public class PowerUp : MonoBehaviour
@@ -51,6 +51,9 @@ public class PowerUp : MonoBehaviour
                     break;
                 case PowerUpType.IchSeheRot:
                     GameManager.Instance.IchSeheRot();
+                    break;
+                case PowerUpType.IchBin1ProzentSchwarz:
+                    GameManager.Instance.IchBin1ProzentSchwarz();
                     break;
                 default:
                     break;

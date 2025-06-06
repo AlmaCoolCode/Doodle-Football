@@ -62,4 +62,18 @@ public class Football : MonoBehaviour
     {
         body.velocity = direction * 5;
     }
+
+    public void schwarz(int schwarz)
+    {
+        if(schwarz == 1)
+        {
+            transform.localPosition = transform.position + new Vector3(0, 0, -1);
+        }
+        if (schwarz == 2)
+        {
+            transform.localPosition = transform.position + new Vector3(0, 0, 1);
+        }
+
+    }
+
 }

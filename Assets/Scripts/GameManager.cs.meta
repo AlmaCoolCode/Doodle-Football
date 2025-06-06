@@ -3,7 +3,21 @@ guid: 4a0bae878c6851942a016b34202f7982
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - football: {instanceID: 0}
+  - player1: {instanceID: 0}
+  - player2: {instanceID: 0}
+  - goalBanner: {instanceID: 0}
+  - goal1: {instanceID: 0}
+  - goal2: {instanceID: 0}
+  - Timer: {instanceID: 0}
+  - whistle: {instanceID: 0}
+  - rot: {instanceID: 0}
+  - ichSeheRot: {instanceID: 0}
+  - ichSehe: {instanceID: 0}
+  - schwarz: {instanceID: 0}
+  - schwarz2: {instanceID: 0}
+  - schwarz3: {fileID: 4292472847937598405, guid: f6b808b2e511c974e8741dc3ad91a87f, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

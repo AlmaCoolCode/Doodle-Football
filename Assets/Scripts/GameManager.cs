@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class GameManager : MonoBehaviour
 {
@@ -19,6 +20,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject rot;
     [SerializeField] GameObject ichSeheRot;
     [SerializeField] GameObject ichSehe;
+    [SerializeField] GameObject schwarz;
+    [SerializeField] GameObject schwarz2;
+    [SerializeField] GameObject schwarz3;
+    [SerializeField] GameObject schwarz4;
     private int TimerStart;
     // Start is called before the first frame update
     void Start()
@@ -68,12 +73,35 @@ public class GameManager : MonoBehaviour
         StartCoroutine(Rot());
     }
 
+    public void IchBin1ProzentSchwarz()
+    {
+        StartCoroutine(Schwarz(7));
+    }
+    private IEnumerator Schwarz(float time)
+    {
+        schwarz.SetActive(true);
+        schwarz2.SetActive(false);
+        schwarz3.SetActive(true);
+        schwarz4.SetActive(true);
+        goal1.schwarz(1);
+        goal2.schwarz(1);
+        football.schwarz(1);
+        yield return new WaitForSeconds(time);
+        schwarz2.SetActive(true);
+        schwarz.SetActive(false);
+        schwarz3.SetActive(false);
+        schwarz4.SetActive(false);
+        goal1.schwarz(2);
+        goal2.schwarz(2);
+        football.schwarz(1);
+    }
+
     private IEnumerator Rot()
     {
         rot.SetActive(true);
         ichSeheRot.SetActive(true);
         ichSehe.SetActive(true);
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(7);
         ichSeheRot.SetActive(false);
         rot.SetActive(false);
         ichSehe.SetActive(false);
