@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject contin;
     [SerializeField] GameObject mainscreen;
     [SerializeField] GameObject restart;
+    [SerializeField] GameObject whiteLight;
     [SerializeField] AudioSource startMusic;
     private int TimerStart;
     private bool isSchwarz = false;
@@ -128,6 +129,7 @@ public class GameManager : MonoBehaviour
         schwarz4.SetActive(true);
         schwarz5.SetActive(true);
         football.schwarz(1);
+        whiteLight.SetActive(false);
         player1.transform.position += new Vector3(0, 0, 2);
         player2.transform.position += new Vector3(0, 0, 2);
         playerStart1.transform.position += new Vector3(0, 0, 2);
@@ -139,6 +141,7 @@ public class GameManager : MonoBehaviour
         schwarz4.SetActive(false);
         schwarz5.SetActive(false);
         football.schwarz(1);
+        whiteLight.SetActive(false);
         player1.transform.position += new Vector3(0, 0, -2);
         player2.transform.position += new Vector3(0, 0, -2);
         playerStart1.transform.position += new Vector3(0, 0, -2);
@@ -156,12 +159,14 @@ public class GameManager : MonoBehaviour
         rot.SetActive(true);
         ichSeheRot.SetActive(true);
         ichSehe.SetActive(true);
+        whiteLight.SetActive(false);
         football.transform.position += new Vector3(0, 0, 2);
         ballStart.transform.position += new Vector3(0, 0, 2);
         yield return new WaitForSeconds(5);
         ichSeheRot.SetActive(false);
         rot.SetActive(false);
         ichSehe.SetActive(false);
+        whiteLight.SetActive(true);
         football.transform.position += new Vector3(0, 0, -2);
         ballStart.transform.position += new Vector3(0, 0, -2);
         isRot = false;
@@ -218,6 +223,7 @@ public class GameManager : MonoBehaviour
             mainscreen.SetActive(true);
             contin.SetActive(true);
             restart.SetActive(true);
+            schwarz2.SetActive(false);
         }
         else
         {
@@ -229,6 +235,14 @@ public class GameManager : MonoBehaviour
             mainscreen.SetActive(false);
             contin.SetActive(false);
             restart.SetActive(false);
+            if (isRot)
+            {
+                schwarz2.SetActive(true);
+            }
+            else
+            {
+                schwarz2.SetActive(false);
+            }
         }
 
 
