@@ -7,6 +7,7 @@ public class LoadScene : MonoBehaviour
 {
     [SerializeField] private string SceneToLoad;
 
+
    public void Load()
     {
         print("Geht");
@@ -16,6 +17,11 @@ public class LoadScene : MonoBehaviour
     public void Quit()
     {
         Application.Quit();
+    }
+
+    public void PauseLoad()
+    {
+        GameManager.Instance.PauseGame();
     }
 
 }

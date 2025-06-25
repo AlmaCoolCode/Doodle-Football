@@ -28,9 +28,17 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject schwarz3;
     [SerializeField] GameObject schwarz4;
     [SerializeField] GameObject schwarz5;
+    [SerializeField] GameObject goalfront;
+    [SerializeField] GameObject goalfront2;
+    [SerializeField] GameObject transparent;
+    [SerializeField] GameObject contin;
+    [SerializeField] GameObject mainscreen;
+    [SerializeField] GameObject restart;
+    [SerializeField] AudioSource startMusic;
     private int TimerStart;
     private bool isSchwarz = false;
     private bool isRot = false;
+    private bool isPaused = false;
     private Coroutine schwarzCoroutine;
     private Coroutine rotCoroutine;
     // Start is called before the first frame update
@@ -45,7 +53,10 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            PauseGame();
+        }
     }
 
     private void UpdateTimerText()
@@ -192,5 +203,34 @@ public class GameManager : MonoBehaviour
     void FullReset()
     {
         Reset();
+    }
+
+    public void PauseGame()
+    {
+        isPaused = !isPaused;
+        if (isPaused)
+        {
+            Time.timeScale = 0f;
+            startMusic.mute = true;
+            goalfront.GetComponent<SpriteRenderer>().sortingOrder = -5;
+            goalfront2.GetComponent<SpriteRenderer>().sortingOrder = -5;
+            transparent.SetActive(true);
+            mainscreen.SetActive(true);
+            contin.SetActive(true);
+            restart.SetActive(true);
+        }
+        else
+        {
+            Time.timeScale = 1f;
+            startMusic.mute = false;
+            goalfront.GetComponent<SpriteRenderer>().sortingOrder = 10;
+            goalfront2.GetComponent<SpriteRenderer>().sortingOrder = 10;
+            transparent.SetActive(false);
+            mainscreen.SetActive(false);
+            contin.SetActive(false);
+            restart.SetActive(false);
+        }
+
+
     }
 }
