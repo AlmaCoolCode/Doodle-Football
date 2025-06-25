@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/Main Screen.unity
+    guid: d2a9e1a978693ef4abde6b95fc5615b4
+  - enabled: 1
     path: Assets/Scenes/Football.unity
     guid: 86af0ff4b9cb3414caa0891ee2d58894
   - enabled: 1
@@ -20,7 +23,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Draw.unity
     guid: 241a67316ce92724d846f92cf795a450
-  - enabled: 1
-    path: Assets/Scenes/Main Screen.unity
-    guid: d2a9e1a978693ef4abde6b95fc5615b4
   m_configObjects: {}

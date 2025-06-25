@@ -49,18 +49,5 @@ public class Goal : MonoBehaviour
             
     }
 
-    public void schwarz(int ja)
-    {
-        if (ja == 1)
-        {
-            transform.localPosition = transform.position + new Vector3(0, 0, -1);
-            print("Geht");
-        }
-
-        if (ja == 2)
-        {
-            transform.localPosition = transform.position + new Vector3(0, 0, -1);
-        }
-
-    }
+    
 }
