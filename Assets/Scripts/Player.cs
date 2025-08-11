@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] Rigidbody2D rigidbody;
+    [SerializeField] Rigidbody2D rb;
     [SerializeField] float jumpspeed = 10;
     [SerializeField] float movespeed = 10;
     [SerializeField] public int playerNumber = 1;
@@ -16,7 +16,6 @@ public class Player : MonoBehaviour
     [SerializeField] public Goal ownGoal;
     [SerializeField] public Player enemy;
     [SerializeField] GameObject iceCube;
-    //[SerializeField] public int seitenWechsel = -1;
     private bool isFrozen = false;
     private bool hasRoboball = false;
     // Start is called before the first frame update
@@ -35,12 +34,12 @@ public class Player : MonoBehaviour
             return;
         }
         if (isFrozen) return;
-        float ySpeed = rigidbody.velocity.y;
+        float ySpeed = rb.velocity.y;
         if (Input.GetButton("Jump" + playerNumber) && IsOnGround())
         {
             ySpeed = jumpspeed;
         }
-        rigidbody.velocity = new Vector2(movespeed * input.x, ySpeed);
+        rb.velocity = new Vector2(movespeed * input.x, ySpeed);
     }
     private bool IsOnGround()
     {
@@ -51,14 +50,9 @@ public class Player : MonoBehaviour
     public void Reset()
     {
         transform.position = playerStart.position;
-        rigidbody.velocity = Vector2.zero;
-        rigidbody.angularVelocity = 0;
+        rb.velocity = Vector2.zero;
+        rb.angularVelocity = 0;
     }
-
-    //public void SeitenWechsel()
-    //{
-
-    //}
 
     public void Roboball()
     {

@@ -144,7 +144,7 @@ Transform:
   m_GameObject: {fileID: 4292472847937598405}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.61, y: 2.31, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -252,7 +252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbbf4b6a8ab4a7846aa76f1e5cdd3870, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rigidbody: {fileID: 385669824976977894}
+  rb: {fileID: 0}
   jumpspeed: 7.5
   movespeed: 5
   playerNumber: 1
@@ -262,8 +262,6 @@ MonoBehaviour:
   ownGoal: {fileID: 0}
   enemy: {fileID: 0}
   iceCube: {fileID: 550983567800826168}
-  playerStart1: {fileID: 1798086799216837082, guid: 517363558d5d01c4787c027aa4b006d2, type: 3}
-  playerStart2: {fileID: 2269193393869979991, guid: 0bb9e36d962691e4ab00a2e2a6113a57, type: 3}
 --- !u!50 &385669824976977894
 Rigidbody2D:
   serializedVersion: 4

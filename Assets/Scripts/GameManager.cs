@@ -39,6 +39,8 @@ public class GameManager : MonoBehaviour
     private int TimerStart;
     private bool isSchwarz = false;
     private bool isRot = false;
+    private bool isKnowR = false;
+    private bool isKnowS = false;
     private bool isPaused = false;
     private Coroutine schwarzCoroutine;
     private Coroutine rotCoroutine;
@@ -57,6 +59,15 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             PauseGame();
+        }
+
+        if (isRot)
+        {
+            whiteLight.SetActive(false);
+        }
+        if (isSchwarz)
+        {
+            whiteLight.SetActive(false);
         }
     }
 
@@ -95,8 +106,8 @@ public class GameManager : MonoBehaviour
             StopCoroutine(rotCoroutine);
             rotCoroutine = null;
             isRot = false;
-            football.transform.position += new Vector3(0, 0, -2);
-            ballStart.transform.position += new Vector3(0, 0, -2);
+            football.transform.position += new Vector3(0, 0, -5);
+            ballStart.transform.position += new Vector3(0, 0, -5);
         }
         rotCoroutine = StartCoroutine(Rot());
     }
@@ -141,7 +152,6 @@ public class GameManager : MonoBehaviour
         schwarz4.SetActive(false);
         schwarz5.SetActive(false);
         football.schwarz(1);
-        whiteLight.SetActive(false);
         player1.transform.position += new Vector3(0, 0, -2);
         player2.transform.position += new Vector3(0, 0, -2);
         playerStart1.transform.position += new Vector3(0, 0, -2);
@@ -156,19 +166,24 @@ public class GameManager : MonoBehaviour
         {
             yield break;
         }
+        isRot = true;
         rot.SetActive(true);
         ichSeheRot.SetActive(true);
         ichSehe.SetActive(true);
         whiteLight.SetActive(false);
-        football.transform.position += new Vector3(0, 0, 2);
-        ballStart.transform.position += new Vector3(0, 0, 2);
+        football.transform.position += new Vector3(0, 0, 5);
+        ballStart.transform.position += new Vector3(0, 0, 5);
+        if (!isSchwarz)
+        {
+            schwarz2.SetActive(true);
+        }
         yield return new WaitForSeconds(5);
         ichSeheRot.SetActive(false);
         rot.SetActive(false);
         ichSehe.SetActive(false);
-        whiteLight.SetActive(true);
-        football.transform.position += new Vector3(0, 0, -2);
-        ballStart.transform.position += new Vector3(0, 0, -2);
+        football.transform.position += new Vector3(0, 0, -5);
+        ballStart.transform.position += new Vector3(0, 0, -5);
+        schwarz2.SetActive(false);
         isRot = false;
         rotCoroutine = null;
     }
@@ -216,6 +231,17 @@ public class GameManager : MonoBehaviour
         if (isPaused)
         {
             Time.timeScale = 0f;
+            if (isRot)
+            {
+                isRot = false;
+                isKnowR = true;
+            }
+            if (isSchwarz)
+            {
+                isSchwarz = false;
+                isKnowS = true;
+            }
+            
             startMusic.mute = true;
             goalfront.GetComponent<SpriteRenderer>().sortingOrder = -5;
             goalfront2.GetComponent<SpriteRenderer>().sortingOrder = -5;
@@ -224,6 +250,7 @@ public class GameManager : MonoBehaviour
             contin.SetActive(true);
             restart.SetActive(true);
             schwarz2.SetActive(false);
+            whiteLight.SetActive(true);
         }
         else
         {
@@ -235,6 +262,17 @@ public class GameManager : MonoBehaviour
             mainscreen.SetActive(false);
             contin.SetActive(false);
             restart.SetActive(false);
+            if (isKnowR)
+            {
+                isRot = true;
+                isKnowR = false;
+            }
+            if (isKnowS)
+            {
+                isSchwarz = true;
+                isKnowS = false;
+            }
+
             if (isRot)
             {
                 schwarz2.SetActive(true);

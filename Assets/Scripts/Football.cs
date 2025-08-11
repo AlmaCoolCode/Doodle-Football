@@ -2,21 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Xml.Serialization;
 using UnityEngine;
-
 public class Football : MonoBehaviour
 {
     [SerializeField] private Transform BallStart;
+    //[SerializeField] private Rigidbody2D rb;
+    [SerializeField] private GameObject roboball;
     [SerializeField] AudioSource kick;
     [SerializeField] SpriteRenderer fire;
     [SerializeField] Sprite RoboSprite;
     [SerializeField] SpriteRenderer Renderer;
+    //[SerializeField] PhysicsMaterial2D ballWeight;
+    //private float originalGravity;
+    //private float originalBounciness;
+    //private float originalFriction;
     private Rigidbody2D body;
     private Sprite FootballSprite;
+    //private bool isBlau = false;
+    //private Coroutine blauCoroutine;
     // Start is called before the first frame update
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
         FootballSprite = Renderer.sprite;
+        //originalGravity = rb.gravityScale;
+        //originalBounciness = ballWeight.bounciness;
+        //originalFriction = ballWeight.friction;
     }
 
     // Update is called once per frame
@@ -29,11 +39,11 @@ public class Football : MonoBehaviour
     {
         if (isaktiv)
         {
-            Renderer.sprite = RoboSprite;
+            roboball.SetActive(true);
         }
         else
         {
-            Renderer.sprite = FootballSprite;
+            roboball.SetActive(false);
         }
     }
 
@@ -76,4 +86,38 @@ public class Football : MonoBehaviour
 
     }
 
+    //public void JumpPowerUp()
+    //{
+        //if (blauCoroutine != null)
+        //{
+            //StopCoroutine(blauCoroutine);
+            //blauCoroutine = null;
+            //isBlau = false;
+            //ballWeight.bounciness = originalBounciness;
+            //ballWeight.friction = originalFriction;
+            //rb.gravityScale = originalGravity;
+        //}
+
+        //if (!isBlau)
+        //{
+            //originalGravity = rb.gravityScale;
+        //}
+        //blauCoroutine = StartCoroutine(Blau());
+    //}
+    //private IEnumerator Blau()
+    //{
+        //if (isBlau)
+        //{
+            //yield break;
+        //}
+        //isBlau = true;
+        //ballWeight.bounciness = originalBounciness + 0.4f;
+        //ballWeight.friction = originalFriction * 0.5f;
+        //rb.gravityScale = originalGravity - 0.3f;
+        //yield return new WaitForSeconds(10);
+        //ballWeight.bounciness = originalBounciness;
+        //ballWeight.friction = originalFriction;
+        //rb.gravityScale = originalGravity;
+        //isBlau = false;
+    //}
 }
